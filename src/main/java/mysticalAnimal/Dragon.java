@@ -1,4 +1,4 @@
-package mysticalAnimals;
+package mysticalAnimal;
 
 public class Dragon {
 
@@ -7,9 +7,15 @@ public class Dragon {
     private int weight;
 
     public Dragon() {
+        System.out.println("Створено невідомго дракона");
     }
 
-    public
+    public Dragon(String name, int age, int weight) {
+        this.name = name;
+        this.age = age;
+        this.weight = weight;
+        System.out.println("Створено повноцінного дракона");
+    }
 
     public void setName(String name) {
         this.name = name;
