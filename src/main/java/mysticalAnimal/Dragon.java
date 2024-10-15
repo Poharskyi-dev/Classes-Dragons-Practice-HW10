@@ -9,6 +9,8 @@ public class Dragon {
     public Dragon() {
     }
 
+    public
+
     public void setName(String name) {
         this.name = name;
     }
@@ -32,4 +34,14 @@ public class Dragon {
     public int getWeight() {
         return this.weight;
     }
+
+    @Override
+    public String toString() {
+        return "Dragon{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", weight=" + weight +
+                '}';
+    }
 }
+
