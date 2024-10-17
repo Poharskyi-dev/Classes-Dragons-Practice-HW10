@@ -1,21 +1,35 @@
 import mysticalAnimal.Dragon;
 import mysticalAnimal.DragonType;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
-    //Dragon creation
-    Dragon dragon01 = new Dragon("Arrax", 100, 2000, DragonType.dragon);
-    Dragon dragon02 = new Dragon("Vermox", 200, 3000, DragonType.wyvern);
-    Dragon dragon03 = new Dragon("Vhagar", 150, 2500, DragonType.drake);
-    Dragon dragon04 = new Dragon();
+        Scanner Input = new Scanner(System.in);
+
+        System.out.println("Enter name of the Dragon:");
+        String inputDragonName = Input.nextLine();
+        System.out.println("Enter type of the Dragon: \n    amphithere,\n" +
+                "    dragon,\n" +
+                "    wyvern,\n" +
+                "    lindWurm,\n" +
+                "    lungDragon,\n" +
+                "    drake,\n" +
+                "    wyrm");
+        String inputDragonType = Input.nextLine().toLowerCase();
+        System.out.println("Enter age of the Dragon:");
+        int inputDragonAge = Input.nextInt();
+        System.out.println("Enter weight of the Dragon:");
+        int inputDragonWeight = Input.nextInt();
 
 
-    // check
-    System.out.println(dragon01.toString());
-    System.out.println(dragon02.toString());
-    System.out.println(dragon03.toString());
-    System.out.println(dragon04.toString());
+        DragonType dragonTypeEnum = DragonType.valueOf(inputDragonType);
+
+        Dragon myDragon = new Dragon(inputDragonName, inputDragonAge, inputDragonWeight, dragonTypeEnum);
+
+        System.out.println(myDragon.toString());
+
+        myDragon.say("Hello, here I am! Now you will die!");
+        myDragon.fireRelease();
     }
 }
-
