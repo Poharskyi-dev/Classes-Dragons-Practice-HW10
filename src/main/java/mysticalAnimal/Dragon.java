@@ -51,6 +51,16 @@ public class Dragon {
         return this.dragonType;
     }
 
+    public void say(String sentence){
+        System.out.println(System.lineSeparator());
+        System.out.println(sentence);
+    }
+
+    public void fireRelease(){
+        System.out.println("");
+        System.out.println("\uD83D\uDD25 \uD83D\uDD25 \uD83D\uDD25");
+    }
+
     @Override
     public String toString() {
         return "Dragon{" +
