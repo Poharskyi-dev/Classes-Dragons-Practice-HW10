@@ -1,6 +1,6 @@
 package mysticalAnimal;
 
-public enum dragonType {
+public enum DragonType {
     amphithere,
     dragon,
     wyvern,

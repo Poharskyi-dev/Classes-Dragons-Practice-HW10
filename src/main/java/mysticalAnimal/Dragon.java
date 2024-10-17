@@ -5,15 +5,17 @@ public class Dragon {
     private String name;
     private int age;
     private int weight;
+    private DragonType dragonType;
 
     public Dragon() {
         System.out.println("Створено невідомго дракона");
     }
 
-    public Dragon(String name, int age, int weight) {
+    public Dragon(String name, int age, int weight, DragonType dragonType) {
         this.name = name;
         this.age = age;
         this.weight = weight;
+        this.dragonType = dragonType;
         System.out.println("Створено повноцінного дракона");
     }
 
@@ -29,6 +31,10 @@ public class Dragon {
         this.weight = weight;
     }
 
+    public void setDragonType(DragonType dragonType) {
+        this.dragonType = dragonType;
+    }
+
     public String getName() {
         return this.name;
     }
@@ -41,12 +47,17 @@ public class Dragon {
         return this.weight;
     }
 
+    public DragonType dragonType() {
+        return this.dragonType;
+    }
+
     @Override
     public String toString() {
         return "Dragon{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", weight=" + weight +
+                ", dragonType=" + dragonType +
                 '}';
     }
 }
