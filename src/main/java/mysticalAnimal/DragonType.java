@@ -7,5 +7,5 @@ public enum DragonType {
     lindWurm,
     lungDragon,
     drake,
-    wyrm, inputDragonType, dragonTypeEnum;
+    wyrm
 }
