@@ -1,4 +1,4 @@
-package mysticalAnimals;
+package mysticalAnimal;
 
 public enum dragonType {
     amphithere,
